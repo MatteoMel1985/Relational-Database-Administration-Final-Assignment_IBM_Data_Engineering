@@ -40,3 +40,12 @@ To resolve it, you need to edit the PostgreSQL file as follows:
 
 * Run the bash file
 
+## ***Task 1.1 - Find the settings in PostgreSQL***  
+
+What is the maximum number of connections allowed for the postgres server on theia lab? 
+
+> Hint: Use the **show** command.
+
+Take a screenshot of the config file that clearly shows this information.
+Name the screenshot as **max-connections.jpg** (images can be saved with either .jpg or .png extension).
+
