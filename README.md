@@ -1,6 +1,6 @@
 ![Skills_Network](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMSkillsNetwork-PY0221EN-Coursera/images/image.png)  
 
-# Final Assignment - Database Administration - Part 1  
+<h1 align="center">Final Assignment - Database Administration - Part 1</h1>
 
 # ***Scenario***  
 
@@ -94,3 +94,26 @@ Take a screenshot of the window that shows the filename and format you have spec
 Name the screenshot as **backup-database.jpg** (images can be saved with either `.jpg` or `.png` extension).  
 
 **End of assignment - Part 1.**
+
+<h1 align="center">Final Assignment - Database Administration - Part 2</h1>  
+
+# ***Scenario***  
+
+You have assumed the role of database administrator for the MySQL server and will perform the tasks like configuration check, recovery of data. You will use indexing to improve the database performance. You will identify which storage engines are supported by the server and which table uses which storage engine. Optionally You will also automate backup tasks.  
+
+# ***Objectives***  
+
+In part 2 of this assignment you will be working on the following aspects of Database Administration.
+
+* Installing/Provisioning
+* Configuration
+* Recovery
+* Indexing
+* Storage Engines
+* Automation of routine tasks
+
+## Exercise 2.1 - Set up the lab environment  
+
+## ***Task 2.2.1- Restore MySQL server using a previous backup***  
+
+Download the backup file [https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0231EN-SkillsNetwork/labs/Final%20Assignment/billingdata.sql.](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0231EN-SkillsNetwork/labs/Final%20Assignment/billingdata.sql.)
