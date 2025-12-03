@@ -184,3 +184,23 @@ Take a screenshot of the bash script with the entire code clearly visible.
 Name the screenshot as **bash-script.jpg** (images can be saved with either `.jpg` or `.png` extension).  
 
 **End of assignment - Part 2.**
+
+<h1 align="center"><h1 align="center">Final Assignment - Database Administration - Part 1</h1></h1>  
+
+# ***Scenario***  
+
+You have been assigned the work on Datasette and perform the tasks like restoration of data and index creation to improve the query performance. You will create views to make queries easier to write.  
+
+# ***Objectives***  
+
+In part 3 of this assignment, you will be working on the following aspects of Database Administration.
+
+* Restore data
+* Indexing
+* View creation
+
+# ***Dataset Used in this Lab***  
+
+The dataset used in this lab is [billing.csv](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0231EN-SkillsNetwork/labs/Final%20Assignment/billing.csv?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDB0231ENSkillsNetwork26763093-2022-01-01).  
+
+
