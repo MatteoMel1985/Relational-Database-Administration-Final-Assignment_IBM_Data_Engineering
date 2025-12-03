@@ -47,5 +47,50 @@ What is the maximum number of connections allowed for the postgres server on the
 > Hint: Use the **show** command.
 
 Take a screenshot of the config file that clearly shows this information.
-Name the screenshot as **max-connections.jpg** (images can be saved with either .jpg or .png extension).
+Name the screenshot as **max-connections.jpg** (images can be saved with either `.jpg` or `.png` extension).
 
+## ***Exercise 1.2 - User Management***  
+
+Perform these user management tasks on your PostgreSQL server.
+Perform the tasks 1.2 to 1.5 using the PostgreSQL CLI. DO NOT USE THE PGADMIN GUI.  
+
+![PostgreSQL GUI](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/LfZzB4RxZ1UC8wmNDe1keQ/1.png)  
+
+## ***Task 1.2 - Create a User***  
+
+Create a user named `backup_operator`.  
+Take a screenshot of the command you used and the output.
+Name the screenshot as **create-user.jpg** (images can be saved with either `.jpg` or `.png` extension).  
+
+## ***Task 1.3 - Create a Role***  
+
+Create a role named `backup`.
+Take a screenshot of the command you used and the output.
+Name the screenshot as **create-role.jpg** (images can be saved with either `.jpg` or `.png` extension).
+
+## ***Task 1.4 - Grant privileges to the role***  
+
+Grant the following privileges to the `backup` role.
+
+* CONNECT ON DATABASE tolldata .
+* SELECT ON ALL TABLES IN SCHEMA toll.
+
+Take a screenshot of the command you used and the output.
+Name the screenshot as **grant-privs-to-role.jpg** (images can be saved with either `.jpg` or `.png` extension).  
+
+## ***Task 1.5 - Grant role to an user***  
+
+Grant the role `backup` to `backup_operator`.
+Take a screenshot of the command you used and the output.
+Name the screenshot as **grant-role.jpg** (images can be saved with either `.jpg` or `.png` extension).  
+
+## Exercise 1.3 - Backup  
+
+## ***Task 1.6 - Backup a database on PostgreSQL server***  
+
+Backup the database `tolldata` using PGADMIN GUI.
+Backup the database `tolldata` into a file named `tolldatabackup.tar`, select the backup format as `Tar`
+Take a screenshot of the window that shows the filename and format you have specified.
+Name the screenshot as **backup-database.jpg** (images can be saved with either `.jpg` or `.png` extension).  
+
+End of assignment - Part 1.
