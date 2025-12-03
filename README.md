@@ -93,4 +93,4 @@ Backup the database `tolldata` into a file named `tolldatabackup.tar`, select th
 Take a screenshot of the window that shows the filename and format you have specified.
 Name the screenshot as **backup-database.jpg** (images can be saved with either `.jpg` or `.png` extension).  
 
-End of assignment - Part 1.
+**End of assignment - Part 1.**
