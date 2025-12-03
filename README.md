@@ -116,4 +116,71 @@ In part 2 of this assignment you will be working on the following aspects of Dat
 
 ## ***Task 2.2.1- Restore MySQL server using a previous backup***  
 
-Download the backup file [https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0231EN-SkillsNetwork/labs/Final%20Assignment/billingdata.sql](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0231EN-SkillsNetwork/labs/Final%20Assignment/billingdata.sql).
+Download the backup file [https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0231EN-SkillsNetwork/labs/Final%20Assignment/billingdata.sql](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0231EN-SkillsNetwork/labs/Final%20Assignment/billingdata.sql).  
+
+Restore this file onto MySQL server.
+List the tables in the `billing` database.
+Take a screenshot of the list of tables.
+Name the screenshot as **database-restore.jpg** (images can be saved with either `.jpg` or `.png` extension).  
+
+## ***Task 2.2.2 - Find the table data size***  
+
+Find the data size of the table `billdata`.
+Take a screenshot of the command you used and the output.
+Name the screenshot as **table-data-size.jpg** (images can be saved with either `.jpg` or `.png` extension).  
+
+## Exercise 2.3 - Indexing  
+
+## ***Task 2.3.1 - Baseline query performance***  
+
+Write a query to select all rows with a billedamount > 19999 in table `billdata`.
+Take a screenshot of the command you used and the output along with the query time.
+Name the screenshot as **query-base-line.jpg** (images can be saved with either `.jpg` or `.png` extension).  
+
+
+## ***Task 2.3.2 - Create an index*** 
+
+Your customer wants to improve the execution time of the query you wrote in Task 2.3.
+Create an appropriate index to make it run faster.
+Take a screenshot of the command you used and the output.
+Name the screenshot as **index-creation.jpg** (images can be saved with either `.jpg` or `.png` extension).  
+
+## ***Task 2.3.3 - Document the improvement in query performance***  
+
+Find out if the index has any impact on query performance.
+Re-run the baseline query of Task 2.3.1 after creating the index.
+Take a screenshot of the command you used and the output along with the query time.
+Name the screenshot as **query-indexed.jpg** (images can be saved with either `.jpg` or `.png` extension).  
+
+## Exercise 2.4 - Storage Engines  
+
+## ***Task 2.4.1 - Find supported storage engines***  
+
+Run a command to find out if your MySQL server supports the `MyISAM` storage engine.
+Take a screenshot of the command you used and the output.
+Name the screenshot as **storage-engines.jpg** (images can be saved with either `.jpg` or `.png` extension).  
+
+## ***Task 2.4.2 - Find the storage engine of a table***  
+
+Find the storage engine of the table `billdata`.
+Take a screenshot of the command you used and the output.
+Name the screenshot as **storage-engine-type.jpg** (images can be saved with either `.jpg` or `.png` extension).  
+
+## Exercise 2.5- OPTIONAL Exercise (Non-graded) Automation of routine tasks  
+
+## ***Bonus Task 2.5.1 - Write a bash script that performs a backup of all the databases***  
+
+`mysqldump` is a command line tool that performs logical backups of a database.
+Its generic syntax is `mysqldump db_name > backup-file.sql`
+Its extended syntax is `mysqldump --all-databases --user=root --password=NzA4Ny1y > backup-file.sql`
+Write a bash script named mybackup.shthat performs the following tasks.
+
+* Perform the backup of all databases using the mysqldump
+* Store the output in the file all-databases-backup.sql
+* In the /tmp directory, create a directory named after current date like YYYYMMDD. For example, 20210830
+* Move the file all-databases-backup.sql to `/tmp/mysqldumps/<current date>/` directory
+
+Take a screenshot of the bash script with the entire code clearly visible.
+Name the screenshot as **bash-script.jpg** (images can be saved with either `.jpg` or `.png` extension).  
+
+**End of assignment - Part 2.**
