@@ -203,4 +203,52 @@ In part 3 of this assignment, you will be working on the following aspects of Da
 
 The dataset used in this lab is [billing.csv](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0231EN-SkillsNetwork/labs/Final%20Assignment/billing.csv?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDB0231ENSkillsNetwork26763093-2022-01-01).  
 
+## Exercise 3.1 - Restore data
 
+## ***Task 3.1 - Restore the table billing***  
+
+Use the `billing.csv` and restore the CSV file into a table named `billing`. Write a query to display the total number of rows imported.
+Take a screenshot of the SQL statements you used and the output.
+Name the screenshot as **restore-table.jpg** (images can be saved with either `.jpg` or `.png` extension).  
+
+<details>
+<summary>click here for hint</summary>
+
+To print the number of imported rows, use the **count** function.
+</details>
+
+## Exercise 3.2 - Create a view  
+
+## ***Task 3.2 - Create a view named basicbilldet***  
+
+Take a screenshot of the SQL statement used to create the view.
+Name the screenshot as **create-view.jpg** (images can be saved with either `.jpg` or `.png` extension).  
+
+## Exercise 3.3 - Indexing 
+
+## ***Task 3.3 - Baseline query performance***  
+
+Write a query to find out all the rows with a billing amount of 19929.
+Hint: Use the command `SELECT strftime(“%Y-%m-%d %H:%M:%f”, “now”);` before and after your query to display the run time.
+**Note**: There will not be much difference in the run time as the number of records is less for the above-given condition.
+Take a screenshot of the command you used, along with the query run time.
+Name the screenshot as **query-base-line.jpg** (images can be saved with either `.jpg` or `.png` extension). If you find it difficult to capture the entire screen in a single screenshot, please capture only the results section showing the commands you used and the output.  
+
+## ***Task 3.4 - Create an index***  
+
+Create an index that can make the query in the previous task faster. Name the index as `billingamount`.
+Take a screenshot of the SQL statement you used and the output.
+Name the screenshot as **index-creation.jpg** (images can be saved with either `.jpg` or `.png` extension). 
+
+## ***Task 3.5 - Document the improvement in query performance***  
+
+Find out if the index has any impact on query performance.
+Re-run the query to find out all the rows with a billing amount of 19929.
+Take a screenshot of the command you used, the output, and the query run time.
+You will NOT be evaluated on the query run time. However, you are encouraged to run the query multiple times and pick the result with the lowest query run time.
+Name the screenshot as **query-after-index.jpg** (images can be saved with either `.jpg` or `.png` extension). If you find it difficult to capture the entire screen in a single screenshot, please capture only the results section showing the commands you used and the output. 
+
+**End of assignment - Part 3.**  
+
+# Author
+# ***[Matteo Meloni](https://www.linkedin.com/in/matteo-meloni-40a357154/)***
