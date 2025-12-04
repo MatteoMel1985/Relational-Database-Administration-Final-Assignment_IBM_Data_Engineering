@@ -30,7 +30,42 @@ To resolve it, you need to edit the PostgreSQL file as follows:
 
 ![save](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/5uS8SoVP7HX9S57PEfna0A/Screenshot%202024-10-22%20133525.png)  
 
-* Run the bash file.
+* Run the bash file by typing the following command on the terminal.
+
+```Bash
+bash postgres-setup.sh
+```  
+
+Once launched, the terminal should appear as in the image.  
+
+![Screenshot 1](https://github.com/MatteoMel1985/Relational-Dataset-Images/blob/main/Relational%20Database%20Management/Screenshot%201.png?raw=true)  
 
 ## ***Task 1.1 - Find the settings in PostgreSQL***  
+
+Type the following command from the terminal, and ensure to copy and paste the `POSTGRES_PASSWORD` of your current session (found in PostgreSQL > Connection Information > POSTGRES_PASSWORD:)  
+
+```bash
+export PGPASSWORD="TYPE YOUR POSTGRES_PASSWORD HERE"
+psql --username=postgres --host=postgres
+```
+
+You should now get a new prompt appearing like  
+
+```bash
+psql --username=postgres --host=postgres
+psql (14.19 (Ubuntu 14.19-0ubuntu0.22.04.1), server 13.2)
+Type "help" for help.
+
+postgres=#
+```
+
+Now, after the prompt `postgres=#`, type
+
+```SQL
+SHOW max_connections;
+```
+
+The following image shows the result in the terminal, and it is also the screenshot `max-connections.jpg`.  
+
+![max-connections.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/1.1max-connections.jpg?raw=true)  
 
