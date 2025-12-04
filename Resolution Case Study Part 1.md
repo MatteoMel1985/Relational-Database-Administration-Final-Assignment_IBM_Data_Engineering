@@ -69,3 +69,41 @@ The following image shows the result in the terminal, and it is also the screens
 
 ![max-connections.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/1.1max-connections.jpg?raw=true)  
 
+## ***Task 1.2 - Create a User***  
+
+Open the PostgreSQL CLI as shown in the image, and ensure to perform the tasks 1.2 to 1.5 using the PostgreSQL CLI.  
+
+![PostgreSQL CLI](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/LfZzB4RxZ1UC8wmNDe1keQ/1.png)  
+
+After the prompt `postgres=#`, type the following SQL command.  
+
+```SQL
+CREATE USER backup_operator;
+```
+
+Take a screenshot of the command and its result and save it as `backup_operator.JPG`.  
+
+[backup_operator.JPG](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/1.2backup_operator.JPG?raw=true)  
+
+## ***Task 1.3 - Create a Role***  
+
+After the prompt `postgres=#`, type the following SQL command.  
+
+```SQL
+CREATE ROLE backup;
+```
+
+This will produce the out  
+
+```SQL
+CREATE ROLE
+```
+
+Take a screenshot of the command and its result and save it as `create-role.jpg`.  
+
+[create-role.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/1.3create-role.JPG?raw=true)  
+
+## ***Task 1.4 - Grant privileges to the role***  
+
+
+
