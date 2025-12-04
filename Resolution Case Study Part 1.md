@@ -105,5 +105,41 @@ Take a screenshot of the command and its result and save it as `create-role.jpg`
 
 ## ***Task 1.4 - Grant privileges to the role***  
 
+Due to an SQL error, I noticed that, despite the file `postgres-setup.sh` was run, the SCEMA `toll` was not created, therefore, we will have to create it manually by running the following command.
+
+```SQL
+CREATE SCHEMA toll;
+```
+
+Now, we can finally proceed to grant priviledges to role `backup`, by running the two following SQL lines.
+
+```SQL
+GRANT CONNECT ON DATABASE tolldata TO backup;
+```
+
+And 
+
+```SQL
+GRANT SELECT ON ALL TABLES IN SCHEMA toll TO backup;
+```
+
+Finally, we can take a screenshot of the command and its result and save it as `grant-privs-to-role.jpg`.  
+
+![grant-privs-to-role.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/1.4grant-privs-to-role.JPG?raw=true)  
+
+## ***Task 1.5 - Grant role to an user***  
+
+Run the following command from the CLI to grant role `backup` to the user `backup_operator`.  
+
+```SQL
+GRANT backup TO backup_operator;
+```
+
+Once run, the user now inherits all privileges of the `backup` role.
+
+Now, we can take a screenshot of the command and its result and save it as `grant-role.jpg`.  
+
+![grant-role.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/1.5grant-role.JPG?raw=true)  
+
 
 
