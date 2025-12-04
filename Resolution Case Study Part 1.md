@@ -157,7 +157,7 @@ On the left pane, click `Servers → PostgreSQL → Databases`, then, right clic
 
 Click on the folder icon at the right side of the label `Filename`, then, once prompted to the `Select file` window, click on the upper arrow icon on the upper-left side, and select the path `/var/lib/pgadmin`.
 
-!Screenshot 5](https://github.com/MatteoMel1985/Relational-Dataset-Images/blob/main/Relational%20Database%20Management/Screenshot%205.png?raw=true)  
+![Screenshot 5](https://github.com/MatteoMel1985/Relational-Dataset-Images/blob/main/Relational%20Database%20Management/Screenshot%205.png?raw=true)  
 
 Then, click on `Create`. 
 
