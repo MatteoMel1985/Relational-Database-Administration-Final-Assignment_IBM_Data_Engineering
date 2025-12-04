@@ -145,7 +145,7 @@ Now, we can take a screenshot of the command and its result and save it as `gran
 
 Open pgAdmin page by clicking the following button.
 
-![Screenshot 2]([https://github.com/MatteoMel1985/Relational-Dataset-Images/blob/main/Relational%20Database%20Management/Screenshot%202.png?raw=true](https://raw.githubusercontent.com/MatteoMel1985/Relational-Dataset-Images/eaeaf1695192a5f54f07524fec85f52bdb32c0ef/Relational%20Database%20Management/Screenshot%202.png))
+![Screenshot 2](https://raw.githubusercontent.com/MatteoMel1985/Relational-Dataset-Images/eaeaf1695192a5f54f07524fec85f52bdb32c0ef/Relational%20Database%20Management/Screenshot%202.png)
 
 Once prompted on the portal, click on Servers in the upper-left pane of the screen, and insert the password, then click OK.
 
