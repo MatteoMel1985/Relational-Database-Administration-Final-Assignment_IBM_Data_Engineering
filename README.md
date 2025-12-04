@@ -185,7 +185,7 @@ Name the screenshot as **bash-script.jpg** (images can be saved with either `.jp
 
 **End of assignment - Part 2.**
 
-<h1 align="center"><h1 align="center">Final Assignment - Database Administration - Part 1</h1></h1>  
+<h1 align="center"><h1 align="center">Final Assignment - Database Administration - Part 3</h1></h1>  
 
 # ***Scenario***  
 
