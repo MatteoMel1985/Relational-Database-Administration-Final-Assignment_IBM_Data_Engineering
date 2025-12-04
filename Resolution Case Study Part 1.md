@@ -141,5 +141,28 @@ Now, we can take a screenshot of the command and its result and save it as `gran
 
 ![grant-role.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/1.5grant-role.JPG?raw=true)  
 
+## ***Task 1.6 - Backup a database on PostgreSQL server***  
 
+Open pgAdmin page by clicking the following button.
 
+![Screenshot 2](https://github.com/MatteoMel1985/Relational-Dataset-Images/blob/main/Relational%20Database%20Management/Screenshot%202.png?raw=true)
+
+Once prompted on the portal, click on Servers in the upper-left pane of the screen, and insert the password, then click OK.
+
+![Screenshot 3](https://github.com/MatteoMel1985/Relational-Dataset-Images/blob/main/Relational%20Database%20Management/Screenshot%203.png?raw=true)  
+
+On the left pane, click `Servers → PostgreSQL → Databases`, then, right click `tolldata` and select `Backup...`.
+
+![Screenshot 4](https://github.com/MatteoMel1985/Relational-Dataset-Images/blob/main/Relational%20Database%20Management/Screenshot%204.png?raw=true)  
+
+Click on the folder icon at the right side of the label `Filename`, then, once prompted to the `Select file` window, click on the upper arrow icon on the upper-left side, and select the path `/var/lib/pgadmin`.
+
+!Screenshot 5](https://github.com/MatteoMel1985/Relational-Dataset-Images/blob/main/Relational%20Database%20Management/Screenshot%205.png?raw=true)  
+
+Then, click on `Create`. 
+
+We will be prompted back to the Backup window. Click on the Format lable, and select `Tar`, then, click on the button `Backup` on the lower right side. 
+
+![backup-database](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/1.6backup-database.JPG?raw=true)  
+
+Finally, we can take a screenshot of the command and its result and save it as `backup-database.jpg`.  
