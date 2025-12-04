@@ -83,7 +83,7 @@ CREATE USER backup_operator;
 
 Take a screenshot of the command and its result and save it as `backup_operator.JPG`.  
 
-[backup_operator.JPG](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/1.2backup_operator.JPG?raw=true)  
+![backup_operator.JPG](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/1.2backup_operator.JPG?raw=true)  
 
 ## ***Task 1.3 - Create a Role***  
 
@@ -101,7 +101,7 @@ CREATE ROLE
 
 Take a screenshot of the command and its result and save it as `create-role.jpg`.  
 
-[create-role.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/1.3create-role.JPG?raw=true)  
+![create-role.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/1.3create-role.JPG?raw=true)  
 
 ## ***Task 1.4 - Grant privileges to the role***  
 
