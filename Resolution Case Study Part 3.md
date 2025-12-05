@@ -32,7 +32,7 @@ Take a screenshot of the output, and save it as `restore-table.jpg`.
 
 ## Exercise 3.2 - Create a view  
 
-## **Task 3.2 - Create a view named basicbilldetails with the columns customerid, month, billedamount**
+## ***Task 3.2 - Create a view named basicbilldetails with the columns customerid, month, billedamount***
 
 Run the following SQL command  
 
@@ -51,7 +51,7 @@ Take a screenshot of its output, and save it as `2create-view.jpg`.
 
 ## Exercise 3.3 - Indexing
 
-## **Task 3.3 - Baseline query performance**  
+## ***Task 3.3 - Baseline query performance***  
 
 As instructed, we'll have to use the command `SELECT strftime(“%Y-%m-%d %H:%M:%f”, “now”);` before and after your query to display the run time.  
 
@@ -70,3 +70,34 @@ SELECT strftime('%Y-%m-%d %H:%M:%f', 'now') AS end_time;
 And take a screenshot of its output, which will be saved as `query-base-line.jpg`.  
 
 ![query-base-line.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/3.3query-base-line.jpg?raw=true)  
+
+## ***Task 3.4 - Create an index***  
+
+Type the following SQL command to create an index,  
+
+```SQL
+CREATE INDEX billingamount
+ON billing(billedamount);
+```
+
+And save its output as `index-creation.jpg`.  
+
+![index-creation.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/3.4index-creation.jpg?raw=true)  
+
+## ***Task 3.5 - Document the improvement in query performance***  
+
+Rerun the SQL query  
+
+```SQL
+SELECT strftime('%Y-%m-%d %H:%M:%f', 'now') AS start_time;
+
+SELECT *
+FROM billing
+WHERE billedamount = 19929;
+
+SELECT strftime('%Y-%m-%d %H:%M:%f', 'now') AS end_time;
+```
+
+Take a screenshot of the output, and save it as `query-after-index.jpg`.  
+
+![query-after-index.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/3.5query-after-index.jpg?raw=true)
