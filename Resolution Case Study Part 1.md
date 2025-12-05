@@ -105,13 +105,15 @@ Take a screenshot of the command and its result and save it as `create-role.jpg`
 
 ## ***Task 1.4 - Grant privileges to the role***  
 
-Due to an SQL error, I noticed that, despite the file `postgres-setup.sh` was run, the SCEMA `toll` was not created, therefore, we will have to create it manually by running the following command.
+Due to an SQL error, I noticed that, despite the file `postgres-setup.sh` being run, the SCEMA `toll` was not created, therefore, I had to build it manually by running the following command.
 
 ```SQL
 CREATE SCHEMA toll;
 ```
 
-Now, we can finally proceed to grant priviledges to role `backup`, by running the two following SQL lines.
+In case the SCHEMA is already present, an error will be thrown, which you can ignore and proceed with the following prompt. 
+
+Now, we can finally proceed to grant privileges to the role `backup`, by running the two following SQL lines.
 
 ```SQL
 GRANT CONNECT ON DATABASE tolldata TO backup;
