@@ -76,6 +76,70 @@ Take a screenshot of the output and save it as `2.2.1database-restore.JPG`.
 
 ![2.2.1database-restore.JPG](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/2.2.1database-restore.PNG?raw=true)
 
+## ***Task 2.2.2 - Find the table data size***  
+
+To find the table data size, we must first select the billing database by running.  
+
+```SQL
+USE billing;
+```
+
+The terminal will show `Database changed`. Finally, we can run the following SQL query that shows the table size.  
+
+```SQL
+SELECT 
+    table_name,
+    ROUND(data_length / 1024, 2) AS data_size_kb,
+    ROUND(index_length / 1024, 2) AS index_size_kb,
+    ROUND((data_length + index_length) / 1024, 2) AS total_size_kb
+FROM information_schema.tables
+WHERE table_schema = 'billing'
+  AND table_name = 'billdata';
+```
+
+The `SELECT` clause specifies the columns you want to retrieve in the resulting set:  
+
+* `table_name` is the name of the table being queried. In this case, it will return `'billdata'`.
+
+* `ROUND(data_length / 1024, 2) AS data_size_kb`:
+
+  * `data_length`: A column from the `information_schema.tables` that holds the physical size of the table data in bytes.
+  * The calculation performs the conversion from bytes to kilobytes
+  * `AS data_size_kb`: This alias gives the resulting calculated column a descriptive name.
+ 
+* `ROUND(index_length / 1024, 2) AS index_size_kb`:
+
+  * `index_length`: A column that holds the physical size of the table's indexes in bytes.
+  * The calculation converts this index size from bytes to kilobytes.
+  * `AS index_size_kb`: This alias gives the resulting column a descriptive name.
+
+* `ROUND((data_length + index_length) / 1024, 2) AS total_size_kb`:
+
+  *  This is the sum of the data size and the index size, representing the total storage size consumed by the table.
+  *  The calculation converts this total size from bytes to kilobytes.
+  *  `AS total_size_kb`: This alias gives the resulting column a descriptive name.
+ 
+* `FROM information_schema.tables`: This specifies the source of the data.
+* `WHERE table_schema = 'billing'`: This filters the results to only include tables that belong to the database (schema) named `'billing'`.
+* `AND table_name = 'billdata'`: This further filters the results to the specific table named `'billdata'` within the `'billing'` schema.
+
+### **Division by 1024**  
+
+Computer storage sizes are typically based on powers of 2. While a kilobyte in the decimal system is $1,000$ bytes, in the binary system (which is used for computer memory and storage addressing), a kilobyte (KB) is defined as $2^{10}$ bytes, which equals $1,024$ bytes.  
+The division converts the original value in bytes (e.g., data_length) to kilobytes (KB).  
+
+* `ROUND(value, decimal_places)`:
+
+  * `ROUND()` function is a standard SQL function that is used to round a number to a specified number of decimal places.
+  * The parameter `2` specifies that the result of the division (data_length / 1024) should be rounded to two decimal places (e.g., $1024.5678$ would become $1024.57$).
+ 
+Once the SQL command is run, take a screenshot of the output and save it as `table-data-size.jpg`.
+
+![table-data-size.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/2.2.2table-data-size.JPG?raw=true)   
+
+
+
+
 
 
 
