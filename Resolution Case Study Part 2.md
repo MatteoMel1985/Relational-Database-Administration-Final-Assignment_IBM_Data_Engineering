@@ -137,7 +137,27 @@ Once the SQL command is run, take a screenshot of the output and save it as `tab
 
 ![table-data-size.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/2.2.2table-data-size.JPG?raw=true)   
 
+## **Exercise 2.3 - Indexing**  
 
+## ***Task 2.3.1 - Baseline query performance***
+
+To show the query execution time in MySQL, run the following command.  
+
+```SQL
+SET profiling = 1;
+```
+
+Then, finally, run this SQL query to see where the `billedamount` is more than 19999 in `billdata`.  
+
+```SQL
+SELECT *
+FROM billdata
+WHERE billedamount > 19999;
+```
+
+Once the SQL command is run, take a screenshot of the output and save it as `query-base-line.jpg`.  
+
+![query-base-line.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/2.3.1query-base-line.JPG?raw=true)  
 
 
 
