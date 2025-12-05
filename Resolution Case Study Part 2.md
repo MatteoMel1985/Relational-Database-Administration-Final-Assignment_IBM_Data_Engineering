@@ -159,7 +159,203 @@ Once the SQL command is run, take a screenshot of the output and save it as `que
 
 ![query-base-line.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/2.3.1query-base-line.JPG?raw=true)  
 
+## ***Task 2.3.2 - Create an index***  
+
+Run the following SQL command to created an index.  
+
+```SQL
+CREATE INDEX idx_billedamount ON billdata(billedamount);
+```
+
+Take a screenshot of the output and save it as `index-creati.JPG`.  
+
+![index-creati.JPG](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/2.3.2index-creati.JPG?raw=true)  
+
+Optionally, if you wish to verify if the index was created, you can run the following command:
+
+```SQL
+SHOW INDEX FROM billdata;
+```
+
+## ***Task 2.3.3 - Document the improvement in query performance***  
+
+After the index on `billedamount` is cretated, run again the SQL command
+
+```SQL
+SELECT * FROM billdata WHERE billedamount > 19999;
+```
+
+Then, take a screenshot of the result and save it as `query-indexed.JPG`.  
+
+![query-indexed.JPG](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/2.3.3query-indexed.JPG?raw=true)  
+
+You should notice a shorter execution time that that registered in task 2.3.1.  
 
 
+## **Exercise 2.4 - Storage Engines**  
 
+## ***Task 2.4.1 - Find supported storage engines***  
 
+Run the following command to list the storage engines.  
+
+```SQL
+SHOW ENGINES;
+```
+
+Among the table, you may want to look if the engine `MyISAM` is supported on not.  
+
+In the output, we can plainly see a `YES` under the table support, associated to the `MyISAM` engine. Take a screenshot of it and save it as `1storage-engines.JPG`.  
+
+![1storage-engines.JPG](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/2.4.1storage-engines.JPG?raw=true)  
+
+## ***Task 2.4.2 - Find the storage engine of a table***  
+
+Run the following command to check the storage engine.  
+
+```SQL
+SHOW TABLE STATUS LIKE 'billdata';
+```
+
+And take a screenshot of its output, saving it as `2.4.2storage-engine-type.JPG`.  
+
+![2.4.2storage-engine-type.JPG](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/2.4.2storage-engine-type.JPG?raw=true)  
+
+We can see that the engine that supports `billdata` is `InnoDB`.  
+
+## **Exercise 2.5- OPTIONAL Exercise (Non-graded) Automation of routine tasks**  
+
+## ***Bonus Task 2.5.1 - Write a bash script that performs a backup of all the databases***  
+
+Following is `mybackup.sh`. Ensure to change the password, the host, and the port with those shown in your `MYSQL_COMMAND`.
+
+```Bash
+#!/bin/bash
+
+# --- 1. MySQL credentials ---
+MYSQL_USER="root"
+MYSQL_PASSWORD="xxxx"
+MYSQL_HOST="xxxx"
+MYSQL_PORT="xxxx"
+
+# --- 2. Backup filename ---
+BACKUP_FILE="all-databases-backup.sql"
+
+# --- 3. Dump ALL databases ---
+mysqldump --host=$MYSQL_HOST --port=$MYSQL_PORT \
+    --user=$MYSQL_USER --password=$MYSQL_PASSWORD \
+    --all-databases > $BACKUP_FILE
+
+# --- 4. Create date-based directory ---
+TODAY=$(date +"%Y%m%d")
+TARGET_DIR="/tmp/mysqldumps/$TODAY"
+mkdir -p "$TARGET_DIR"
+
+# --- 5. Move backup file to the target directory ---
+mv "$BACKUP_FILE" "$TARGET_DIR/"
+
+# --- 6. Print success message ---
+echo "Backup completed successfully!"
+echo "Backup stored in: $TARGET_DIR/$BACKUP_FILE"
+```
+
+### ***1. MySQL Credentials***  
+
+```bash
+# --- 1. MySQL credentials ---
+MYSQL_USER="root"
+MYSQL_PASSWORD="xxxx"
+MYSQL_HOST="xxxx"
+MYSQL_PORT="xxxx"
+```
+
+* `MYSQL_USER`: The username to connect with (here: root).
+* `MYSQL_PASSWORD`: The password for the user.
+* `MYSQL_HOST`: The IP address or hostname of the MySQL server.
+* `MYSQL_PORT`: The port MySQL listens on (default: 3306).
+
+### ***2. Backup Filename***  
+
+```bash
+# --- 2. Backup filename ---
+BACKUP_FILE="all-databases-backup.sql"
+```
+
+* Defines the name of the SQL dump file that `mysqldump` will create.
+* The filename is static, but the destination folder will change each day.
+
+### ***3. Dump ALL Databases***  
+
+```bash
+# --- 3. Dump ALL databases ---
+mysqldump --host=$MYSQL_HOST --port=$MYSQL_PORT \
+    --user=$MYSQL_USER --password=$MYSQL_PASSWORD \
+    --all-databases > $BACKUP_FILE
+```
+
+This is the core action of the script.  
+
+* `--host=$MYSQL_HOST`: Connects to the server specified earlier.
+* `--port=$MYSQL_PORT`: Uses the correct MySQL port.
+* `--user=$MYSQL_USER`: Logs in using the provided username.
+* `--password=$MYSQL_PASSWORD`: Supplies the password.
+* `--all-databases`: Exports EVERY database on the server.
+
+Redirection:  
+
+```bash
+> $BACKUP_FILE
+```
+
+Sends the output to a file named:  
+
+```bash
+all-databases-backup.sql
+```
+
+If the file exists, it is overwritten.  
+
+### ***4. Create Date-Based Directory***  
+
+```bash
+# --- 4. Create date-based directory ---
+TODAY=$(date +"%Y%m%d")
+TARGET_DIR="/tmp/mysqldumps/$TODAY"
+mkdir -p "$TARGET_DIR"
+```
+
+4.1 Generate today’s date:  
+
+* `date +"%Y%m%d"`: Outputs the current date in YYYYMMDD format (e.g., 20251201).
+* `$( ... )`: Command substitution; stores output into TODAY.
+
+4.2 Build the target directory path  
+
+`TARGET_DIR="/tmp/mysqldumps/$TODAY"` Creates a folder path like: `/tmp/mysqldumps/20251201`  
+
+4.3 Create the folder
+
+`mkdir -p "$TARGET_DIR"`:
+
+* `mkdir`: Creates a directory. `
+* -p`: Creates parent directories if needed, and does not complain if the directory already exists.
+* `"$TARGET_DIR"`: Ensures proper handling even if the path contains spaces (good practice).
+
+### ***5. Move Backup File into the Target Directory***  
+
+`mv "$BACKUP_FILE" "$TARGET_DIR/"`  
+
+The `mv` command:  
+
+* Moves the newly created SQL backup from the script’s working directory.
+* Into the date-based folder created above.
+
+### ***6. Print Success Message***  
+
+```bash
+echo "Backup completed successfully!"
+echo "Backup stored in: $TARGET_DIR/$BACKUP_FILE"
+```
+
+* `echo` prints text to the terminal.
+* Confirms the script completed without errors.
+* Shows the exact path of the backup file to help the user find it.
