@@ -4,11 +4,11 @@
 
 Click on the menu bar icon with 3 horizontal lines on the upper-right side of Datasette, and select `Add datasets`.  
 
-![Screenshot 8](https://github.com/MatteoMel1985/Relational-Dataset-Images/blob/main/Relational%20Database%20Management/Screenshot%208.PNG?raw=true)  
+![Screenshot 8](https://res.cloudinary.com/dmrfsdtq2/image/upload/v1784202509/fktmzyvnbatvrxdhqqgz.png)  
 
 In the section of the Lab Guide called **Dataset Used in this Lab**, right-click on the hyperlink `billing.csv`, and select `Copy link address`.  
 
-![Screenshot 9](https://github.com/MatteoMel1985/Relational-Dataset-Images/blob/main/Relational%20Database%20Management/Screenshot%209.PNG?raw=true)  
+![Screenshot 9](https://res.cloudinary.com/dmrfsdtq2/image/upload/v1784202509/puid73rqnbjubqvhquiz.png)  
 
 It will give you the following path.  
 
@@ -18,7 +18,7 @@ https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0231EN-
 
 Copy and paste it into the Datassette label named Full URL to Dataset, and click on the Create button.  
 
-![Screenshot 10](https://github.com/MatteoMel1985/Relational-Dataset-Images/blob/main/Relational%20Database%20Management/Screenshot%2010.PNG?raw=true)  
+![Screenshot 10](https://res.cloudinary.com/dmrfsdtq2/image/upload/v1784202505/fawun7sriedxx131woho.png)  
 
 Now, run the following SQL command  
 
@@ -28,7 +28,7 @@ SELECT COUNT(*) FROM billing;
 
 Take a screenshot of the output, and save it as `restore-table.jpg`.  
 
-![restore-table.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/3.1restore-table.jpg?raw=true)  
+![restore-table.jpg](./Tasks/3.1restore-table.jpg)  
 
 ## Exercise 3.2 - Create a view  
 
@@ -47,7 +47,7 @@ FROM billing;
 
 Take a screenshot of its output, and save it as `2create-view.jpg`.  
 
-![2create-view.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/3.2create-view.jpg?raw=true)  
+![2create-view.jpg](./Tasks/3.2create-view.jpg)  
 
 ## Exercise 3.3 - Indexing
 
@@ -69,7 +69,7 @@ SELECT strftime('%Y-%m-%d %H:%M:%f', 'now') AS end_time;
 
 And take a screenshot of its output, which will be saved as `query-base-line.jpg`.  
 
-![query-base-line.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/3.3query-base-line.jpg?raw=true)  
+![query-base-line.jpg](./Tasks/3.3query-base-line.jpg)  
 
 ## ***Task 3.4 - Create an index***  
 
@@ -82,7 +82,7 @@ ON billing(billedamount);
 
 And save its output as `index-creation.jpg`.  
 
-![index-creation.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/3.4index-creation.jpg?raw=true)  
+![index-creation.jpg](./Tasks/3.4index-creation.jpg)  
 
 ## ***Task 3.5 - Document the improvement in query performance***  
 
@@ -100,4 +100,4 @@ SELECT strftime('%Y-%m-%d %H:%M:%f', 'now') AS end_time;
 
 Take a screenshot of the output, and save it as `query-after-index.jpg`.  
 
-![query-after-index.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/3.5query-after-index.jpg?raw=true)
+![query-after-index.jpg](./Tasks/3.5query-after-index.jpg)
