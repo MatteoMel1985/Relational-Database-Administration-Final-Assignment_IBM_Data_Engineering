@@ -67,7 +67,7 @@ SHOW max_connections;
 
 The following image shows the result in the terminal, and it is also the screenshot `max-connections.jpg`.  
 
-![max-connections.jpg](./1.1max-connections.jpg)  
+![max-connections.jpg](./Tasks/1.1max-connections.jpg)  
 
 ## ***Task 1.2 - Create a User***  
 
@@ -83,7 +83,7 @@ CREATE USER backup_operator;
 
 Take a screenshot of the command and its result and save it as `backup_operator.JPG`.  
 
-![backup_operator.JPG](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/1.2backup_operator.JPG?raw=true)  
+![backup_operator.JPG](./Tasks/1.2backup_operator.JPG)  
 
 ## ***Task 1.3 - Create a Role***  
 
@@ -101,7 +101,7 @@ CREATE ROLE
 
 Take a screenshot of the command and its result and save it as `create-role.jpg`.  
 
-![create-role.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/1.3create-role.JPG?raw=true)  
+![create-role.jpg](./Tasks/1.3create-role.JPG)  
 
 ## ***Task 1.4 - Grant privileges to the role***  
 
@@ -127,7 +127,7 @@ GRANT SELECT ON ALL TABLES IN SCHEMA toll TO backup;
 
 Finally, we can take a screenshot of the command and its result and save it as `grant-privs-to-role.jpg`.  
 
-![grant-privs-to-role.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/1.4grant-privs-to-role.JPG?raw=true)  
+![grant-privs-to-role.jpg](./Tasks/1.4grant-privs-to-role.JPG)  
 
 ## ***Task 1.5 - Grant role to an user***  
 
@@ -141,30 +141,30 @@ Once run, the user now inherits all privileges of the `backup` role.
 
 Now, we can take a screenshot of the command and its result and save it as `grant-role.jpg`.  
 
-![grant-role.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/1.5grant-role.JPG?raw=true)  
+![grant-role.jpg](./Tasks/1.5grant-role.JPG)  
 
 ## ***Task 1.6 - Backup a database on PostgreSQL server***  
 
 Open pgAdmin page by clicking the following button.
 
-![Screenshot 2](https://raw.githubusercontent.com/MatteoMel1985/Relational-Dataset-Images/eaeaf1695192a5f54f07524fec85f52bdb32c0ef/Relational%20Database%20Management/Screenshot%202.png)
+![Screenshot 2](https://res.cloudinary.com/dmrfsdtq2/image/upload/v1784202506/j6bsphsj6vfbwvxtqwac.png)
 
 Once prompted on the portal, click on Servers in the upper-left pane of the screen, and insert the password, then click OK.
 
-![Screenshot 3](https://github.com/MatteoMel1985/Relational-Dataset-Images/blob/main/Relational%20Database%20Management/Screenshot%203.png?raw=true)  
+![Screenshot 3](https://res.cloudinary.com/dmrfsdtq2/image/upload/v1784202507/l4n0l1w1sfia9c4rzfev.png)  
 
 On the left pane, click `Servers → PostgreSQL → Databases`, then, right click `tolldata` and select `Backup...`.
 
-![Screenshot 4](https://github.com/MatteoMel1985/Relational-Dataset-Images/blob/main/Relational%20Database%20Management/Screenshot%204.png?raw=true)  
+![Screenshot 4](https://res.cloudinary.com/dmrfsdtq2/image/upload/v1784202508/qkywb2wwfcnt4atamzmg.png)  
 
 Click on the folder icon at the right side of the label `Filename`, then, once prompted to the `Select file` window, click on the upper arrow icon on the upper-left side, and select the path `/var/lib/pgadmin`.
 
-![Screenshot 5](https://github.com/MatteoMel1985/Relational-Dataset-Images/blob/main/Relational%20Database%20Management/Screenshot%205.png?raw=true)  
+![Screenshot 5](https://res.cloudinary.com/dmrfsdtq2/image/upload/v1784202509/thtkynpflw7ioixqqtd9.png)  
 
 Then, click on `Create`. 
 
 We will be prompted back to the Backup window. Click on the Format lable, and select `Tar`, then, click on the button `Backup` on the lower right side. 
 
-![backup-database](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/1.6backup-database.JPG?raw=true)  
+![backup-database](./Tasks/1.6backup-database.JPG)  
 
 Finally, we can take a screenshot of the command and its result and save it as `backup-database.jpg`.  
