@@ -2,11 +2,11 @@
 
 Start the PostgreSQL server by clicking on the Explorer icon in the left pane, then select Databases, then PostgreSQL, and finally, click on the Create button.
 
-![screenshot 5](https://github.com/MatteoMel1985/Relational-Dataset-Images/blob/main/Images/Screenshot%205.png?raw=true)  
+![screenshot 5](https://res.cloudinary.com/dmrfsdtq2/image/upload/v1784202502/hperkc55bxopimodkjyu.png)  
 
 If a terminal is not yet open, click on Terminal in the upper menu bar and select New Terminal.
 
-![Screenshot 4](https://github.com/MatteoMel1985/Relational-Dataset-Images/blob/main/Images/Screenshot%204.png?raw=true)  
+![Screenshot 4](https://res.cloudinary.com/dmrfsdtq2/image/upload/v1784202499/sr8ird7wuu4escj3lh6l.png)  
 
 Ensure that the path shown in the command ends with `/home/project$`, then, write the following command and press enter.
 
@@ -38,7 +38,7 @@ bash postgres-setup.sh
 
 Once launched, the terminal should appear as in the image.  
 
-![Screenshot 1](https://github.com/MatteoMel1985/Relational-Dataset-Images/blob/main/Relational%20Database%20Management/Screenshot%201.png?raw=true)  
+![Screenshot 1](https://res.cloudinary.com/dmrfsdtq2/image/upload/v1784202496/gypfobkf343gjsxebvxd.png)  
 
 ## ***Task 1.1 - Find the settings in PostgreSQL***  
 
@@ -67,7 +67,7 @@ SHOW max_connections;
 
 The following image shows the result in the terminal, and it is also the screenshot `max-connections.jpg`.  
 
-![max-connections.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/1.1max-connections.jpg?raw=true)  
+![max-connections.jpg](./1.1max-connections.jpg)  
 
 ## ***Task 1.2 - Create a User***  
 
