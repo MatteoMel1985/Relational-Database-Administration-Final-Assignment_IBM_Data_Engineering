@@ -32,7 +32,7 @@ Which should result in the terminal showing `billingdata.sql` listed.
 
 To connect to MySQL, copy the `MYSQL_COMMAND` you can find in `MySQL label > Connection and Information > MYSQL_COMMAND`, inclusive of your own password.
 
-![Screenshhot 7](https://github.com/MatteoMel1985/Relational-Dataset-Images/blob/main/Relational%20Database%20Management/Screenshot%207.png?raw=true)  
+![Screenshhot 7](https://res.cloudinary.com/dmrfsdtq2/image/upload/v1784202508/isjdbkyxribun4ruyq4l.png)  
 
 Since we want to run the restore command, rewrite it as follows, and run it from your terminal. 
 
@@ -56,7 +56,7 @@ SHOW DATABASES;
 
 If the database were loaded correctly, a similar response should appear.  
 
-![Screenshot 6](https://github.com/MatteoMel1985/Relational-Dataset-Images/blob/main/Relational%20Database%20Management/Screenshot%206.PNG?raw=true)  
+![Screenshot 6](https://res.cloudinary.com/dmrfsdtq2/image/upload/v1784202506/lm8vepxbqa3jqcoerwo4.png)  
 
 Now, `SELECT` the billing database. 
 
@@ -74,7 +74,7 @@ SHOW TABLES;
 
 Take a screenshot of the output and save it as `2.2.1database-restore.JPG`. 
 
-![2.2.1database-restore.JPG](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/2.2.1database-restore.PNG?raw=true)
+![2.2.1database-restore.JPG](./Tasks/2.2.1database-restore.JPG)
 
 ## ***Task 2.2.2 - Find the table data size***  
 
@@ -135,7 +135,7 @@ The division converts the original value in bytes (e.g., data_length) to kilobyt
  
 Once the SQL command is run, take a screenshot of the output and save it as `table-data-size.jpg`.
 
-![table-data-size.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/2.2.2table-data-size.JPG?raw=true)   
+![table-data-size.jpg](./Tasks/2.2.2table-data-size.JPG)   
 
 ## **Exercise 2.3 - Indexing**  
 
@@ -157,7 +157,7 @@ WHERE billedamount > 19999;
 
 Once the SQL command is run, take a screenshot of the output and save it as `query-base-line.jpg`.  
 
-![query-base-line.jpg](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/2.3.1query-base-line.JPG?raw=true)  
+![query-base-line.jpg](./Tasks/2.3.1query-base-line.JPG)  
 
 ## ***Task 2.3.2 - Create an index***  
 
@@ -169,7 +169,7 @@ CREATE INDEX idx_billedamount ON billdata(billedamount);
 
 Take a screenshot of the output and save it as `index-creati.JPG`.  
 
-![index-creati.JPG](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/2.3.2index-creati.JPG?raw=true)  
+![index-creati.JPG](./Tasks/2.3.2index-creati.JPG)  
 
 Optionally, if you wish to verify if the index was created, you can run the following command:
 
@@ -187,7 +187,7 @@ SELECT * FROM billdata WHERE billedamount > 19999;
 
 Then, take a screenshot of the result and save it as `query-indexed.JPG`.  
 
-![query-indexed.JPG](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/2.3.3query-indexed.JPG?raw=true)  
+![query-indexed.JPG](./Tasks/2.3.3query-indexed.JPG)  
 
 You should notice a shorter execution time that that registered in task 2.3.1.  
 
@@ -206,7 +206,7 @@ Among the table, you may want to look if the engine `MyISAM` is supported on not
 
 In the output, we can plainly see a `YES` under the table support, associated to the `MyISAM` engine. Take a screenshot of it and save it as `1storage-engines.JPG`.  
 
-![1storage-engines.JPG](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/2.4.1storage-engines.JPG?raw=true)  
+![1storage-engines.JPG](./Tasks/2.4.1storage-engines.JPG)  
 
 ## ***Task 2.4.2 - Find the storage engine of a table***  
 
@@ -218,7 +218,7 @@ SHOW TABLE STATUS LIKE 'billdata';
 
 And take a screenshot of its output, saving it as `2.4.2storage-engine-type.JPG`.  
 
-![2.4.2storage-engine-type.JPG](https://github.com/MatteoMel1985/Relational-Database-Administration-Final-Assignment_IBM_Data_Engineering/blob/main/Tasks/2.4.2storage-engine-type.JPG?raw=true)  
+![2.4.2storage-engine-type.JPG](./Tasks/2.4.2storage-engine-type.JPG)  
 
 We can see that the engine that supports `billdata` is `InnoDB`.  
 
